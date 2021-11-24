@@ -235,6 +235,9 @@
 \newcommand{\defnxname}[1]{\indextext{\idxxname{#1}}\xname{#1}}
 \newcommand{\defnlibxname}[1]{\indexlibrary{\idxxname{#1}}\xname{#1}}
 
+\definecolor{date-month-gray}{gray}{0.4}
+\newcommand{\cppdate}[2]{\tcode{#1\textcolor{date-month-gray}{#2}L}}
+
 % Non-compound defined term.
 \newcommand{\defn}[1]{\defnx{#1}{#1}}
 % Defined term with different index entry.
