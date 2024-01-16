@@ -5,8 +5,8 @@
 failed=0
 
 # Ignore files where rules may be violated within macro definitions.
-texfiles=$(ls *.tex | grep -v macros.tex | grep -v layout.tex | grep -v tables.tex)
-texlibdesc="support.tex concepts.tex diagnostics.tex memory.tex meta.tex utilities.tex strings.tex containers.tex iterators.tex ranges.tex algorithms.tex numerics.tex time.tex locales.tex iostreams.tex regex.tex threads.tex"
+texfiles=$(ls *.tex | grep -v macros.tex | grep -v macros_extensions.tex | grep -v layout.tex | grep -v tables.tex)
+texlibdesc="@_jegp_library_sources@"
 texlib="lib-intro.tex $texlibdesc"
 
 # Filter that reformats the error message as a "workflow command",
@@ -164,6 +164,7 @@ done |
 # Fixup: sed '/\\begin{example}/{N;s/\n$//;}'
 
 # Comment not aligned to multiple of four. (Ignore lines with "@".)
+(! @check_comment_alignment@) ||
 for f in $texfiles; do
     sed -n '/begin{codeblock\(tu\)\?}/,/end{codeblock\(tu\)\?}/{/^[^@]*[^ @][^@]*\/\//{=;p;};}' $f |
     # prefix output with filename and line

@@ -1,13 +1,22 @@
 %!TEX root = std.tex
 %%--------------------------------------------------
 %% Version numbers
-\newcommand{\docno}{Dxxxx}
-\newcommand{\prevdocno}{N4971}
-\newcommand{\cppver}{202302L}
+\newcommand{\docno}{@document_number@}
+\newcommand{\prevdocno}{@previous_document_number@}
 
 %% Release date
-\newcommand{\reldate}{\today}
+\newcommand{\reldate}{@release_date@}
+
+%% Cover information
+\newcommand{\docnohdr}{@document_number_header@}
+\newcommand{\replytohdr}{@reply_to_header@}
+\newcommand{\replyto}{@reply_to@}
+\newcommand{\covertitle}{@cover_title@}
+\newcommand{\coverfooter}{@cover_footer@}
 
 %% Library chapters
-\newcommand{\firstlibchapter}{support}
-\newcommand{\lastlibchapter}{thread}
+\newcommand{\firstlibchapter}{@first_library_chapter@}
+\newcommand{\lastlibchapter}{@last_library_chapter@}
+
+%% License
+\newcommand{\pagelicense}{@page_license@}
