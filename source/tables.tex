@@ -158,6 +158,14 @@
  \end{libsumtabbase}
 }
 
+\newenvironment{modularlibsumtab}[3][l]
+{
+ \begin{libsumtabbase}{#1}{#2}{#3}{Subclause}{Module}
+}
+{
+ \end{libsumtabbase}
+}
+
 % usage: \begin{concepttable}{TITLE}{XREF}{LAYOUT}
 % produces table at current location
 \newenvironment{concepttable}[3]
